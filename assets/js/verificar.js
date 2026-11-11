@@ -43,7 +43,7 @@
 
   function mostrarHistorico(){
     try{
-      var dados=JSON.parse(localStorage.getItem("bomfilho:pedidos-gerados")||"[]");
+      var dados=JSON.parse(localStorage.getItem("lapizza:pedidos-gerados")||"[]");
       if(!Array.isArray(dados)||!dados.length){historicoBox.textContent="Nenhum pedido foi gerado neste navegador.";return;}
       dados.slice(0,10).forEach(function(p){
         var div=document.createElement("div");div.className="pedido";
