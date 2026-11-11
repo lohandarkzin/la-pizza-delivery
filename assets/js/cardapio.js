@@ -13,29 +13,29 @@
 
 const CONFIG = {
   /* ---- IDENTIDADE DA CASA ---- */
-  marcaLinha1: "BOM FILHO",
-  marcaLinha2: "MARITUBA",
-  tagline: "PIZZAS ARTESANAIS \u2022 BURGERS SMASH",
+  marcaLinha1: "LA’ PIZZA",
+  marcaLinha2: "DELIVERY",
+  tagline: "PIZZAS ARTESANAIS • DELIVERY",
 
   /* ---- WHATSAPP QUE RECEBE OS PEDIDOS ----
      Formato: 55 + DDD + numero, tudo junto e sem espacos.
      Exemplo Marituba/PA: "5591988887777"                                   */
-  whatsapp: "559184188747",
+  whatsapp: "559182690437",
 
   /* ---- PAINEL DE DELIVERY ---- */
-  painelEndpoint: "https://bom-filho-delivery.lohandarkzin.chatgpt.site/api/orders",
+  painelEndpoint: "",
 
   /* ---- ENDERECO (aparece no rodape) ---- */
-  enderecoLinha1: "AV. JOAO PAULO II, 1200",
-  enderecoLinha2: "CENTRO, MARITUBA - PA",
-  enderecoLinha3: "CEP 67200-000",
+  enderecoLinha1: "LA’ PIZZA DELIVERY",
+  enderecoLinha2: "CONSULTE A ÁREA DE ENTREGA",
+  enderecoLinha3: "",
 
   /* ---- HORARIO DE FUNCIONAMENTO ---- */
-  horarioLinha1: "TODOS OS DIAS: 06H AS 00H",
-  horarioLinha2: "ABERTO TODOS OS DIAS",
+  horarioLinha1: "PEDIDOS PELO WHATSAPP",
+  horarioLinha2: "CONSULTE DISPONIBILIDADE",
 
   /* ---- ENTREGA ---- */
-  taxaEntrega: 6.0,              // Taxa em reais. Use 0 para entrega gratis.
+  taxaEntrega: 0,              // Taxa em reais. Use 0 para entrega gratis.
   pedidoMinimo: 0,               // Valor minimo do pedido. Use 0 para nenhum.
 
   /* ---- FORMAS DE PAGAMENTO ACEITAS ---- */
@@ -60,267 +60,12 @@ const CONFIG = {
    ========================================================================== */
 
 const CARDAPIO = [
-  /* ------------------------------ PIZZAS ------------------------------ */
-  {
-    categoria: "pizzas",
-    nome: "PIZZA CALABRESA",
-    descricao: "Tamanho G • 8 fatias. Molho especial, queijo, calabresa, cebola e orégano.",
-    preco: 40.00,
-    foto: "assets/img/pizza-calabresa-bf.jpg?v=2"
-  },
-  {
-    categoria: "pizzas",
-    nome: "PIZZA MUSSARELA",
-    descricao: "Tamanho G • 8 fatias. Molho especial, queijo, tomate, azeitona e orégano.",
-    preco: 40.00,
-    foto: "assets/img/pizza-mussarela-bf.jpg?v=2"
-  },
-  {
-    categoria: "pizzas",
-    nome: "PIZZA 4 QUEIJOS",
-    descricao: "Tamanho G • 8 fatias. Molho especial, queijo, Catupiry, cheddar, provolone e orégano.",
-    preco: 50.00,
-    foto: "assets/img/pizza-quatro-queijos-bf.jpg?v=2"
-  },
-  {
-    categoria: "pizzas",
-    nome: "PIZZA FRANGO COM CATUPIRY",
-    descricao: "Tamanho G • 8 fatias. Molho especial, queijo, frango, Catupiry, tomate e orégano.",
-    preco: 50.00,
-    foto: "assets/img/pizza-frango-catupiry-bf.jpg?v=2"
-  },
-  {
-    categoria: "pizzas",
-    nome: "PIZZA MISTA",
-    descricao: "Tamanho G • 8 fatias. Molho especial, queijo, calabresa, presunto, batata palha, azeitona e orégano.",
-    preco: 50.00,
-    foto: "assets/img/pizza-mista-bf.jpg?v=2"
-  },
-  {
-    categoria: "pizzas",
-    nome: "PIZZA PORTUGUESA",
-    descricao: "Tamanho G • 8 fatias. Molho especial, queijo, presunto, Catupiry, tomate, pimentão, ovos cozidos, cebola, azeitona e orégano.",
-    preco: 60.00,
-    foto: "assets/img/pizza-portuguesa-bf.jpg?v=2"
-  },
-  {
-    categoria: "pizzas",
-    nome: "PIZZA CALABRESA COM BACON",
-    descricao: "Tamanho G • 8 fatias. Molho especial, calabresa fatiada, bacon, queijo, muçarela e orégano.",
-    preco: 50.00,
-    foto: "assets/img/pizza-calabresa-bacon-bf.jpg?v=2"
-  },
-
-  /* ---------------------------- HAMBURGUERES --------------------------- */
-  {
-    categoria: "burgers",
-    nome: "BF CLASSICO",
-    descricao: "Pão brioche, 1 carne 150g, queijo mussarela, alface americana, tomate e molho especial da casa.",
-    preco: 20.00,
-    foto: "assets/img/burger-bf-classico.jpg?v=2"
-  },
-  {
-    categoria: "burgers",
-    nome: "BF CHICKEN",
-    descricao: "Pão brioche, frango desfiado, queijo mussarela, alface americana, tomate e molho especial da casa.",
-    preco: 20.00,
-    foto: "assets/img/burger-bf-chicken.jpg?v=2"
-  },
-  {
-    categoria: "burgers",
-    nome: "BF FAST",
-    descricao: "Pão brioche, 1 carne 150g, bacon crocante, queijo mussarela, alface americana e molho BBQ.",
-    preco: 25.00,
-    foto: "assets/img/burger-bf-fast.jpg?v=2"
-  },
-  {
-    categoria: "burgers",
-    nome: "BF PREMIUM",
-    descricao: "Pão brioche, alface, 1 carne (150g), calabresa, bacon, cebola caramelizada e molho da casa.",
-    preco: 25.00,
-    foto: "assets/img/burger-bf-premium.jpg?v=2"
-  },
-  {
-    categoria: "burgers",
-    nome: "BF CHEDDAR",
-    descricao: "Pão brioche, 2 carnes (150g cada), cheddar cremoso em dobro, bacon crocante e molho especial da casa.",
-    preco: 30.00,
-    foto: "assets/img/burger-bf-cheddar.jpg?v=2"
-  },
-  {
-    categoria: "burgers",
-    nome: "BF PRIME",
-    descricao: "Pão brioche, 2 carnes (150g cada), calabresa fatiada, bacon crocante, cebola caramelizada, queijo mussarela e molho especial da casa.",
-    preco: 30.00,
-    foto: "assets/img/burger-bf-prime.jpg?v=2"
-  },
-  {
-    categoria: "burgers",
-    nome: "BF SUPREME",
-    descricao: "Pão brioche, 2 carnes (150g cada), cheddar cremoso, mussarela, bacon crocante, calabresa fatiada, cebola caramelizada, alface americana, tomate e molho.",
-    preco: 35.00,
-    foto: "assets/img/burger-bf-supreme.jpg?v=2"
-  },
-  {
-    categoria: "burgers",
-    nome: "BF MONSTER",
-    descricao: "Pão brioche, 3 carnes (150g cada), bacon crocante, calabresa fatiada, cebola caramelizada, queijo mussarela triplo e molho especial da casa.",
-    preco: 40.00,
-    foto: "assets/img/burger-bf-monster.jpg?v=2"
-  },
-
-
-  /* ------------------------------- COMBOS ------------------------------- */
-  {
-    categoria: "combos",
-    nome: "COMBO PIZZA CLÁSSICA",
-    descricao: "1 Pizza Calabresa G (8 fatias) + 2 Coca-Cola lata 350ml.",
-    preco: 47.00,
-    foto: "assets/img/pizza-calabresa-bf.jpg?v=2"
-  },
-  {
-    categoria: "combos",
-    nome: "COMBO PIZZA 4 QUEIJOS",
-    descricao: "1 Pizza 4 Queijos G (8 fatias) + 1 Coca-Cola 2L.",
-    preco: 59.00,
-    foto: "assets/img/pizza-quatro-queijos-bf.jpg?v=2"
-  },
-  {
-    categoria: "combos",
-    nome: "COMBO PIZZA PORTUGUESA",
-    descricao: "1 Pizza Portuguesa G (8 fatias) + 1 Fanta Laranja 2L.",
-    preco: 69.00,
-    foto: "assets/img/pizza-portuguesa-bf.jpg?v=2"
-  },
-  {
-    categoria: "combos",
-    nome: "COMBO FAMÍLIA PIZZA",
-    descricao: "2 Pizzas G clássicas (Calabresa ou Mussarela) + 1 Coca-Cola 2L. Informe os sabores nas observações.",
-    preco: 85.00,
-    foto: "assets/img/pizza-calabresa-bf.jpg?v=2"
-  },
-  {
-    categoria: "combos",
-    nome: "COMBO DUPLO ESPECIAL",
-    descricao: "1 Pizza Frango com Catupiry G + 1 Pizza 4 Queijos G + 1 Coca-Cola 2L.",
-    preco: 105.00,
-    foto: "assets/img/pizza-frango-catupiry-bf.jpg?v=2"
-  },
-  {
-    categoria: "combos",
-    nome: "COMBO PIZZA COMPLETO",
-    descricao: "1 Pizza Portuguesa G + 1 Pizza Calabresa com Bacon G + 1 Coca-Cola 2L.",
-    preco: 115.00,
-    foto: "assets/img/pizza-portuguesa-bf.jpg?v=2"
-  },
-  {
-    categoria: "combos",
-    nome: "COMBO TRIO DE PIZZAS",
-    descricao: "3 Pizzas G clássicas (Calabresa ou Mussarela) + 1 Coca-Cola 2L. Informe os sabores nas observações.",
-    preco: 120.00,
-    foto: "assets/img/pizza-mussarela-bf.jpg?v=2"
-  },
-  {
-    categoria: "combos",
-    nome: "COMBO BF CLÁSSICO",
-    descricao: "1 BF Clássico + 1 Coca-Cola lata 350ml.",
-    preco: 23.00,
-    foto: "assets/img/burger-bf-classico.jpg?v=2"
-  },
-  {
-    categoria: "combos",
-    nome: "COMBO DUPLO BF",
-    descricao: "2 BF Clássicos + 2 Coca-Cola lata 350ml.",
-    preco: 46.00,
-    foto: "assets/img/burger-bf-classico.jpg?v=2"
-  },
-  {
-    categoria: "combos",
-    nome: "COMBO BF PRIME",
-    descricao: "1 BF Prime + 1 Coca-Cola lata 350ml.",
-    preco: 33.00,
-    foto: "assets/img/burger-bf-prime.jpg?v=2"
-  },
-
-  /* ----------------------------- REFEIÇÕES ----------------------------- */
-  {
-    categoria: "refeicoes",
-    nome: "CARNE ASSADA DE PANELA",
-    descricao: "Carne assada de panela bem temperada, preparada no capricho.",
-    preco: 20.00,
-    foto: "assets/img/refeicao-carne-panela-ai.jpg"
-  },
-  {
-    categoria: "refeicoes",
-    nome: "CALABRESA ACEBOLADA",
-    descricao: "Calabresa acebolada douradinha e bem temperada.",
-    preco: 20.00,
-    foto: "assets/img/refeicao-calabresa-acebolada-ai.jpg"
-  },
-  {
-    categoria: "refeicoes",
-    nome: "BIFE AO MOLHO MADEIRA",
-    descricao: "Bife macio servido com molho madeira saboroso.",
-    preco: 20.00,
-    foto: "assets/img/refeicao-bife-molho-madeira-ai.jpg"
-  },
-  {
-    categoria: "refeicoes",
-    nome: "FRANGO AO FORNO",
-    descricao: "Frango assado ao forno, dourado e bem temperado.",
-    preco: 20.00,
-    foto: "assets/img/refeicao-frango-forno-ai.jpg"
-  },
-
-  /* ------------------------------ BEBIDAS ------------------------------ */
-  {
-    categoria: "bebidas",
-    nome: "COCA-COLA LATA 350ML",
-    descricao: "Coca-Cola lata 350ml, bem gelada.",
-    preco: 5.00,
-    foto: "assets/img/drink-coca-lata.jpg?v=2"
-  },
-  {
-    categoria: "bebidas",
-    nome: "GUARANÁ LATA 350ML",
-    descricao: "Guaraná lata 350ml, bem gelado.",
-    preco: 5.00,
-    foto: "assets/img/drink-guarana-lata.jpg?v=2"
-  },
-  {
-    categoria: "bebidas",
-    nome: "COCA-COLA 2L",
-    descricao: "Coca-Cola garrafa 2 litros, bem gelada.",
-    preco: 13.00,
-    foto: "assets/img/drink-coca-2l.jpg?v=2"
-  },
-  {
-    categoria: "bebidas",
-    nome: "FANTA LARANJA 2L",
-    descricao: "Fanta Laranja garrafa 2 litros, bem gelada.",
-    preco: 13.00,
-    foto: "assets/img/drink-fanta-2l.jpg?v=2"
-  },
-  {
-    categoria: "bebidas",
-    nome: "ÁGUA 500ML",
-    descricao: "Água mineral 500ml.",
-    preco: 3.00,
-    foto: "assets/img/drink-agua-500ml.jpg?v=2"
-  },
-  {
-    categoria: "bebidas",
-    nome: "SUCO NATURAL 300ML",
-    descricao: "Suco natural 300ml. Consulte os sabores disponíveis.",
-    preco: 5.00,
-    foto: "assets/img/drink-suco-300ml.jpg?v=2"
-  },
-  {
-    categoria: "bebidas",
-    nome: "SUCO NATURAL 1L",
-    descricao: "Suco natural 1 litro. Consulte os sabores disponíveis.",
-    preco: 15.00,
-    foto: "assets/img/drink-suco-1l.jpg?v=2"
-  }
-
+  { categoria: "pizzas", nome: "PIZZA CALABRESA", descricao: "Tamanho G • Molho de tomate, mussarela, calabresa, cebola e orégano.", preco: 40.00, foto: "assets/img/pizza-calabresa-bf.jpg?v=3" },
+  { categoria: "pizzas", nome: "PIZZA PRESUNTO", descricao: "Tamanho G • Molho de tomate, mussarela, presunto, tomate e orégano.", preco: 40.00, foto: "assets/img/pizza-mussarela-bf.jpg?v=3" },
+  { categoria: "pizzas", nome: "PIZZA MISTA", descricao: "Tamanho G • Molho de tomate, mussarela, calabresa, presunto, azeitona, cebola e orégano.", preco: 40.00, foto: "assets/img/pizza-mista-bf.jpg?v=3" },
+  { categoria: "pizzas", nome: "PIZZA MARGUERITA", descricao: "Tamanho G • Molho de tomate, mussarela, tomate, manjericão e orégano.", preco: 40.00, foto: "assets/img/pizza-marguerita-bf.jpg?v=3" },
+  { categoria: "pizzas", nome: "PIZZA 4 QUEIJOS", descricao: "Tamanho G • Molho de tomate, mussarela, provolone, ricota, Catupiry e orégano.", preco: 40.00, foto: "assets/img/pizza-quatro-queijos-bf.jpg?v=3" },
+  { categoria: "pizzas", nome: "PIZZA PORTUGUESA", descricao: "Tamanho G • Molho de tomate, mussarela, calabresa, cebola, pimentão, azeitona, ovos e orégano.", preco: 40.00, foto: "assets/img/pizza-portuguesa-bf.jpg?v=3" },
+  { categoria: "pizzas", nome: "PIZZA FRANGO COM CATUPIRY", descricao: "Tamanho G • Molho de tomate, mussarela, frango, Catupiry, azeitona e orégano.", preco: 50.00, foto: "assets/img/pizza-frango-catupiry-bf.jpg?v=3" },
+  { categoria: "pizzas", nome: "PIZZA MODA DA CASA", descricao: "Tamanho G • Molho de tomate, mussarela, peito de peru, bacon, tomate, Catupiry e orégano.", preco: 60.00, foto: "assets/img/pizza-mista-bf.jpg?v=3" }
 ];
