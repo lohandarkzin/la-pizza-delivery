@@ -3,34 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bom Filho Marituba | Pizzas na brasa e burgers smash</title>
-<meta name="description" content="Pizzas artesanais e burgers smash feitos na brasa. Peca pelo site e receba quentinho em Marituba.">
+<title>La’ Pizza Delivery | Pizzas artesanais La’ Pizza Delivery</title>
+<meta name="description" content="Pizzas artesanais feitos na brasa. Peca pelo site e receba quentinho em Marituba.">
 <meta name="theme-color" content="#0A0908">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.svg?v=20261111" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/estilo.css">
-<link rel="stylesheet" href="assets/css/promocao.css">
+<link rel="stylesheet" href="assets/css/estilo.css?v=20261111">
+<link rel="stylesheet" href="assets/css/promocao.css?v=20261111">
 </head>
 <body>
 
 <!-- ================= CABECALHO ================= -->
 <header class="topo" id="topo">
   <div class="topo__interno">
-    <a class="marca" href="#topo" aria-label="Bom Filho Marituba, ir para o topo">
+    <a class="marca" href="#topo" aria-label="La’ Pizza Delivery, ir para o topo">
       <span class="marca__nome">
         <span data-config="marcaLinha1">BOM FILHO</span>
         <em data-config="marcaLinha2">MARITUBA</em>
       </span>
-      <span class="marca__tag" data-config="tagline">PIZZAS NA BRASA &bull; BURGERS SMASH</span>
+      <span class="marca__tag" data-config="tagline">PIZZAS ARTESANAIS &bull; DELIVERY</span>
     </a>
 
     <nav class="nav" id="nav" aria-label="Menu principal">
       <a href="#cardapio" data-fecha-menu>CARDAPIO</a>
       <a href="#cardapio" data-aba="pizzas" data-fecha-menu>PIZZAS</a>
-      <a href="#cardapio" data-aba="burgers" data-fecha-menu>BURGERS</a>
-      <a href="#cardapio" data-aba="bebidas" data-fecha-menu>BEBIDAS</a>
+      
+      
       <a href="#" data-abre-carrinho data-fecha-menu>MEU PEDIDO</a>
     </nav>
 
@@ -52,11 +52,11 @@
 
   <!-- ================= HERO ================= -->
   <section class="hero">
-    <img class="hero__foto" src="assets/img/hero-brasa.jpg" alt="Pizza na brasa e hamburguer smash sobre tabua de madeira com chamas ao fundo" width="1536" height="1024" fetchpriority="high">
+    <img class="hero__foto" src="assets/img/hero-brasa.jpg" alt="Pizzas artesanais La’ Pizza Delivery" width="1536" height="1024" fetchpriority="high">
     <div class="hero__veu"></div>
     <div class="hero__conteudo">
-      <h1 class="hero__titulo">FEITO NA BRASA.<br>SABOR DE VERDADE.</h1>
-      <p class="hero__texto">PIZZAS ARTESANAIS E BURGERS SMASH<br>FEITOS NA BRASA, DO JEITO QUE TEM QUE SER.</p>
+      <h1 class="hero__titulo">SABORES DE LA PIZZA</h1>
+      <p class="hero__texto">PIZZAS ARTESANAIS, FEITAS COM CARINHO E MUITO SABOR.</p>
       <a class="btn-ouro hero__cta" href="#cardapio">VER CARD&Aacute;PIO</a>
     </div>
   </section>
@@ -65,8 +65,8 @@
   <section class="cardapio" id="cardapio">
     <div class="abas" role="tablist" aria-label="Categorias do cardapio">
       <button class="aba" role="tab" type="button" data-categoria="pizzas" aria-selected="true">PIZZAS</button>
-      <button class="aba" role="tab" type="button" data-categoria="burgers" aria-selected="false">HAMBURGUERES</button>
-      <button class="aba" role="tab" type="button" data-categoria="bebidas" aria-selected="false">BEBIDAS</button>
+      
+      
     </div>
 
     <div class="aviso-pizzas" id="avisoPizzas">🍕 <strong>PIZZAS: apenas tamanho G (8 fatias)</strong></div>
@@ -112,7 +112,7 @@
 </main>
 
 <footer class="rodape">
-  <p><span data-config="marcaLinha1">BOM FILHO</span> <em data-config="marcaLinha2">MARITUBA</em> &mdash; PIZZARIA E HAMBURGUERIA</p>
+  <p><span data-config="marcaLinha1">BOM FILHO</span> <em data-config="marcaLinha2">MARITUBA</em> &mdash; PIZZARIA DELIVERY</p>
 </footer>
 
 <!-- ================= BARRA FIXA DO CELULAR ================= -->
@@ -129,51 +129,17 @@
     <button class="promo-fechar" id="promoFechar" type="button" aria-label="Fechar promoções">&times;</button>
 
     <article class="promo-slide is-ativo">
-      <img src="assets/img/hero-brasa.jpg" alt="Hambúrguer e pizza feitos na brasa">
+      <img src="assets/img/pizza-frango-catupiry.jpg" alt="Pizza artesanal La’ Pizza Delivery">
       <div class="promo-conteudo">
-        <p class="promo-kicker">BOM FILHO MARITUBA</p>
-        <h2 class="promo-titulo">FEITO NA BRASA</h2>
-        <p class="promo-texto">Pizzas artesanais e burgers smash preparados para chegar quentinhos até você.</p>
-        <a class="promo-btn" href="#cardapio">Ver cardápio</a>
+        <p class="promo-kicker">LA’ PIZZA DELIVERY</p>
+        <h2 class="promo-titulo">SABORES DE LA PIZZA</h2>
+        <p class="promo-texto">Confira nosso cardápio de pizzas tamanho grande e peça pelo WhatsApp.</p>
+        <a class="promo-btn" href="#cardapio" data-aba="pizzas">Ver pizzas</a>
       </div>
     </article>
 
-    <article class="promo-slide">
-      <img src="assets/img/pizza-frango-catupiry.jpg" alt="Pizza de frango com catupiry">
-      <div class="promo-conteudo">
-        <p class="promo-kicker">PROMOÇÃO</p>
-        <h2 class="promo-titulo">PIZZA + SABOR</h2>
-        <p class="promo-texto">Escolha sua pizza favorita e monte seu pedido do seu jeito.</p>
-        <a class="promo-btn" href="#cardapio" data-aba="pizzas">Pedir pizza</a>
-      </div>
-    </article>
+    <div class="promo-controles" id="promoControles" aria-label="Selecionar promoção"><button class="promo-dot is-ativo" type="button" aria-label="Promoção 1"></button></div>
 
-    <article class="promo-slide">
-      <img src="assets/img/burger-bacon-cheddar.jpg" alt="Hambúrguer bacon cheddar">
-      <div class="promo-conteudo">
-        <p class="promo-kicker">BURGERS NA BRASA</p>
-        <h2 class="promo-titulo">BATEU A FOME?</h2>
-        <p class="promo-texto">Tem burger caprichado, bacon, cheddar e muito sabor esperando por você.</p>
-        <a class="promo-btn" href="#cardapio" data-aba="burgers">Ver burgers</a>
-      </div>
-    </article>
-
-    <article class="promo-slide">
-      <img src="assets/img/produto-bebidas.jpg" alt="Bebidas geladas">
-      <div class="promo-conteudo">
-        <p class="promo-kicker">PARA ACOMPANHAR</p>
-        <h2 class="promo-titulo">BEBIDA GELADA</h2>
-        <p class="promo-texto">Complete seu pedido com refrigerantes, sucos e outras opções.</p>
-        <a class="promo-btn" href="#cardapio" data-aba="bebidas">Ver bebidas</a>
-      </div>
-    </article>
-
-    <div class="promo-controles" id="promoControles" aria-label="Selecionar promoção">
-      <button class="promo-dot is-ativo" type="button" aria-label="Promoção 1"></button>
-      <button class="promo-dot" type="button" aria-label="Promoção 2"></button>
-      <button class="promo-dot" type="button" aria-label="Promoção 3"></button>
-      <button class="promo-dot" type="button" aria-label="Promoção 4"></button>
-    </div>
     <span class="promo-aviso">Troca automática a cada 5 segundos</span>
   </div>
 </div>
@@ -291,7 +257,7 @@
   start();
 })();
 </script>
-<script src="assets/js/cardapio.js"></script>
-<script src="assets/js/app.js"></script>
+<script src="assets/js/cardapio.js?v=20261111"></script>
+<script src="assets/js/app.js?v=20261111"></script>
 </body>
 </html>
