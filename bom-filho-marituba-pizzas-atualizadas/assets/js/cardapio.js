@@ -57,12 +57,12 @@ const CONFIG = {
    ========================================================================== */
 
 const CARDAPIO = [
-  { categoria: "pizzas", nome: "PIZZA CALABRESA", descricao: "Tamanho G • Molho de tomate, mussarela, calabresa, cebola e orégano. Acompanha refrigerante Garoto 1 L.", preco: 40.00, foto: "assets/img/pizza-calabresa.jpg?v=20261111" },
-  { categoria: "pizzas", nome: "PIZZA PRESUNTO", descricao: "Tamanho G • Molho de tomate, mussarela, presunto, tomate e orégano. Acompanha refrigerante Garoto 1 L.", preco: 40.00, foto: "assets/img/pizza-calabresa.jpg?v=20261111" },
-  { categoria: "pizzas", nome: "PIZZA MISTA", descricao: "Tamanho G • Molho de tomate, mussarela, calabresa, presunto, azeitona, cebola e orégano. Acompanha refrigerante Garoto 1 L.", preco: 40.00, foto: "assets/img/pizza-calabresa-bacon.jpg?v=20261111" },
-  { categoria: "pizzas", nome: "PIZZA MARGUERITA", descricao: "Tamanho G • Molho de tomate, mussarela, tomate, manjericão e orégano. Acompanha refrigerante Garoto 1 L.", preco: 40.00, foto: "assets/img/pizza-marguerita.jpg?v=20261111" },
-  { categoria: "pizzas", nome: "PIZZA 4 QUEIJOS", descricao: "Tamanho G • Molho de tomate, mussarela, provolone, ricota, Catupiry e orégano. Acompanha refrigerante Garoto 1 L.", preco: 40.00, foto: "assets/img/pizza-quatro-queijos.jpg?v=20261111" },
-  { categoria: "pizzas", nome: "PIZZA PORTUGUESA", descricao: "Tamanho G • Molho de tomate, mussarela, calabresa, cebola, pimentão, azeitona, ovos e orégano. Acompanha refrigerante Garoto 1 L.", preco: 40.00, foto: "assets/img/pizza-portuguesa.jpg?v=20261111" },
+  { categoria: "pizzas", nome: "PIZZA CALABRESA", descricao: "Tamanho G • Molho de tomate, mussarela, calabresa, cebola e orégano. Acompanha Guaraná Garoto 1 L.", preco: 40.00, foto: "assets/img/pizza-calabresa.jpg?v=20261111" },
+  { categoria: "pizzas", nome: "PIZZA PRESUNTO", descricao: "Tamanho G • Molho de tomate, mussarela, presunto, tomate e orégano. Acompanha Guaraná Garoto 1 L.", preco: 40.00, foto: "assets/img/pizza-calabresa.jpg?v=20261111" },
+  { categoria: "pizzas", nome: "PIZZA MISTA", descricao: "Tamanho G • Molho de tomate, mussarela, calabresa, presunto, azeitona, cebola e orégano. Acompanha Guaraná Garoto 1 L.", preco: 40.00, foto: "assets/img/pizza-calabresa-bacon.jpg?v=20261111" },
+  { categoria: "pizzas", nome: "PIZZA MARGUERITA", descricao: "Tamanho G • Molho de tomate, mussarela, tomate, manjericão e orégano. Acompanha Guaraná Garoto 1 L.", preco: 40.00, foto: "assets/img/pizza-marguerita.jpg?v=20261111" },
+  { categoria: "pizzas", nome: "PIZZA 4 QUEIJOS", descricao: "Tamanho G • Molho de tomate, mussarela, provolone, ricota, Catupiry e orégano. Acompanha Guaraná Garoto 1 L.", preco: 40.00, foto: "assets/img/pizza-quatro-queijos.jpg?v=20261111" },
+  { categoria: "pizzas", nome: "PIZZA PORTUGUESA", descricao: "Tamanho G • Molho de tomate, mussarela, calabresa, cebola, pimentão, azeitona, ovos e orégano. Acompanha Guaraná Garoto 1 L.", preco: 40.00, foto: "assets/img/pizza-portuguesa.jpg?v=20261111" },
   { categoria: "pizzas", nome: "PIZZA FRANGO COM CATUPIRY", descricao: "Tamanho G • Molho de tomate, mussarela, frango, Catupiry, azeitona e orégano.", preco: 50.00, foto: "assets/img/pizza-frango-catupiry.jpg?v=20261111" },
   { categoria: "pizzas", nome: "PIZZA MODA DA CASA", descricao: "Tamanho G • Molho de tomate, mussarela, peito de peru, bacon, tomate, Catupiry e orégano.", preco: 60.00, foto: "assets/img/pizza-calabresa-bacon.jpg?v=20261111" }
 ];
