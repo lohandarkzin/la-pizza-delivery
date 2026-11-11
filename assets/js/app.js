@@ -471,7 +471,7 @@
       window.location.href = url;
       mostrarAviso("Pedido preparado para enviar à La’ Pizza");
     } catch (e) {
-      formErro.textContent = "Nao foi possivel enviar ao painel. Tente novamente em instantes.";
+      formErro.textContent = "Nao foi possivel abrir o WhatsApp. Confira sua conexao e tente novamente.";
       formErro.hidden = false;
       mostrarAviso("Pedido nao enviado");
     } finally {
