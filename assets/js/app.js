@@ -6,7 +6,7 @@
 (function () {
   "use strict";
 
-  var CHAVE = "bomfilho:pedido";
+  var CHAVE = "lapizza:pedido";
   var dinheiro = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
 
   var pega = function (sel) { return document.querySelector(sel); };
@@ -342,7 +342,7 @@
     var data = String(agora.getFullYear()).slice(-2) + dois(agora.getMonth() + 1) + dois(agora.getDate());
     var hora = dois(agora.getHours()) + dois(agora.getMinutes());
     var aleatorio = Math.random().toString(36).slice(2, 6).toUpperCase();
-    return "BF-" + data + "-" + hora + "-" + aleatorio;
+    return "LP-" + data + "-" + hora + "-" + aleatorio;
   }
 
   async function hashTexto(texto) {
@@ -402,13 +402,13 @@
     if (obs) { linhas.push("*Observa\u00e7\u00e3o:* " + obs); }
 
     linhas.push("");
-    linhas.push("Pedido gerado automaticamente pelo site Bom Filho.");
+    linhas.push("Pedido gerado automaticamente pelo site La’ Pizza Delivery.");
     return linhas.join("\n");
   }
 
   function registrarLocalmente(codigo, mensagemBase, verificacao) {
     try {
-      var chave = "bomfilho:pedidos-gerados";
+      var chave = "lapizza:pedidos-gerados";
       var historico = JSON.parse(localStorage.getItem(chave) || "[]");
       if (!Array.isArray(historico)) historico = [];
       historico.unshift({
@@ -467,30 +467,9 @@
     try {
       var numeroLoja = String(CONFIG.whatsapp || "").replace(/\D/g, "");
       var mensagem = await montarMensagemProtegida();
-      var registro = await registrarNoPainel();
-      var numeroPedido = registro && registro.order ? registro.order.id : "";
-      var entregador = registro && registro.assignedCourier ? registro.assignedCourier : null;
-      var numeroEntregador = entregador && entregador.phone
-        ? String(entregador.phone).replace(/\D/g, "")
-        : "";
-
-      if (numeroEntregador.length === 10 || numeroEntregador.length === 11) {
-        numeroEntregador = "55" + numeroEntregador;
-      }
-
-      if (numeroPedido) {
-        mensagem += "\n*Numero no painel:* #" + numeroPedido;
-      }
-      if (entregador && entregador.name) {
-        mensagem += "\n*Entregador:* " + entregador.name;
-      }
-
-      var numeroDestino = numeroEntregador.length >= 12 ? numeroEntregador : numeroLoja;
-      var url = "https://wa.me/" + numeroDestino + "?text=" + encodeURIComponent(mensagem);
+      var url = "https://wa.me/" + numeroLoja + "?text=" + encodeURIComponent(mensagem);
       window.location.href = url;
-      mostrarAviso(numeroDestino === numeroEntregador
-        ? "Pedido enviado ao painel e preparado para o entregador"
-        : "Sem entregador ativo; pedido preparado para a loja");
+      mostrarAviso("Pedido preparado para enviar à La’ Pizza");
     } catch (e) {
       formErro.textContent = "Nao foi possivel enviar ao painel. Tente novamente em instantes.";
       formErro.hidden = false;
