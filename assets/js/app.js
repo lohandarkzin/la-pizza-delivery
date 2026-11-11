@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BOM FILHO MARITUBA - FUNCIONAMENTO DO SITE
+   LA’ PIZZA DELIVERY - FUNCIONAMENTO DO SITE
    (voce nao precisa mexer aqui: o que muda no dia a dia esta em cardapio.js)
    ========================================================================== */
 
@@ -77,7 +77,7 @@
       if (valor) { el.textContent = valor; }
     });
 
-    document.title = CONFIG.marcaLinha1 + " " + CONFIG.marcaLinha2 + " | Pizzas artesanais e burgers smash";
+    document.title = CONFIG.marcaLinha1 + " " + CONFIG.marcaLinha2 + " | Pizzas artesanais La’ Pizza Delivery";
 
     var select = pega("#campoPagamento");
     (CONFIG.pagamentos || []).forEach(function (forma) {
