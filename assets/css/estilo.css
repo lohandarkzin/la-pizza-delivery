@@ -31,7 +31,12 @@ html { scroll-behavior: smooth; scroll-padding-top: calc(var(--altura-topo) + 8p
 
 body {
   margin: 0;
-  background: var(--preto);
+  background-color: var(--preto);
+  background-image: linear-gradient(rgba(10, 9, 8, .86), rgba(10, 9, 8, .92)), url('../img/fundo-la-pizza.jpg?v=20261112');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--creme);
   font-family: var(--fonte-texto);
   font-size: 16px;
