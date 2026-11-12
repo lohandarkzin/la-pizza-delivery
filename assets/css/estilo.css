@@ -32,7 +32,7 @@ html { scroll-behavior: smooth; scroll-padding-top: calc(var(--altura-topo) + 8p
 body {
   margin: 0;
   background-color: var(--preto);
-  background-image: linear-gradient(rgba(10, 9, 8, .12), rgba(10, 9, 8, .22)), url('../img/fundo-la-pizza.jpg?v=20261112');
+  background-image: linear-gradient(rgba(10, 9, 8, .05), rgba(10, 9, 8, .08)), url('../img/fundo-la-pizza.webp?v=20261112-4');
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;
@@ -532,7 +532,7 @@ body.travado .barra-mobile { display: none; }
   position: fixed;
   inset: 0;
   z-index: 70;
-  background: rgba(5, 4, 3, .18);
+  background: rgba(5, 4, 3, .08);
   animation: aparecer .2s ease both;
 }
 
